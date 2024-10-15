@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Hello! I am in the index</p>
+<div th:if = "${error == 'Password does not match'}">
+
+  <h3>User is not logged in</h3>
+</div>
+<div th:if = "${error != 'Password does not match'}">
+  <p th:text = "${user.username}"></p>
+  <p th:text = "${user.email}"></p>
+</div>
+</body>
+</html>
